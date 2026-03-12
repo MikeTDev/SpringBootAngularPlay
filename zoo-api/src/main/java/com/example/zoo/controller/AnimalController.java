@@ -11,8 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/animals")
-@CrossOrigin(origins = "http://localhost:4200")
-public class AnimalController {
+public class AnimalController extends ZooController {
     private final ZooService zooService;
 
     public AnimalController(ZooService zooService) {
@@ -35,10 +34,5 @@ public class AnimalController {
     public ResponseEntity<AnimalDto> addAnimal(@RequestBody CreateAnimalRequest request) {
         AnimalDto created = zooService.addAnimal(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
-    }
-
-    @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<String> handleBadRequest(IllegalArgumentException ex) {
-        return ResponseEntity.badRequest().body(ex.getMessage());
     }
 }
