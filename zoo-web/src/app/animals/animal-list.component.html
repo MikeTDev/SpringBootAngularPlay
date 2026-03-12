@@ -1,0 +1,15 @@
+<h2>Zoo Animals</h2>
+
+<p *ngIf="isLoading">Loading animals...</p>
+<p *ngIf="errorMessage">{{ errorMessage }}</p>
+
+<ul *ngIf="!isLoading && animals.length > 0">
+  <li *ngFor="let animal of animals">
+    <strong>{{ animal.name }}</strong>
+    <span>({{ animal.type }})</span>
+  </li>
+</ul>
+
+<p *ngIf="!isLoading && animals.length === 0">
+  No animals found.
+</p>

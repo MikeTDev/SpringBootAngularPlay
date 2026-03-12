@@ -1,0 +1,68 @@
+#################################
+# OS
+#################################
+
+.DS_Store
+Thumbs.db
+
+#################################
+# IDE / Editor
+#################################
+
+.vscode/
+.idea/
+*.iml
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+#################################
+# Logs
+#################################
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#################################
+# Java / Spring Boot (zoo-api)
+#################################
+
+zoo-api/target/
+zoo-api/*.log
+zoo-api/.mvn/
+zoo-api/mvnw.cmd
+zoo-api/mvnw
+
+#################################
+# Angular / Node (zoo-web)
+#################################
+
+zoo-web/node_modules/
+zoo-web/dist/
+zoo-web/.angular/
+zoo-web/.cache/
+zoo-web/coverage/
+zoo-web/tmp/
+zoo-web/out-tsc/
+
+#################################
+# Environment / secrets
+#################################
+
+.env
+.env.local
+.env.*.local
+
+#################################
+# Misc
+#################################
+
+*.tmp
+*.temp
+*.swp
+*.bak
+.vscode/
